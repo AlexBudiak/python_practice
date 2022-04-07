@@ -1,0 +1,5 @@
+n = int(input('Input number: '))
+i = 2
+while n % i != 0:
+    i += 1
+print(f'Smallest divisor other than one :  {i}')
