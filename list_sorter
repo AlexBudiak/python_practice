@@ -1,0 +1,22 @@
+def get_input_parameters():
+    original_list = [input('Enter number list separated by commas: ')]
+    return original_list
+
+def display_result(sorted_list):
+    print(f'Sorted list: {sorted_list}')
+
+def sort_list(original_list):
+    sorted_list = original_list
+    swapped = True
+    while swapped:
+        swapped = False
+        for i in range(len(sorted_list) - 1):
+            if sorted_list[i] > sorted_list[i + 1]:
+                sorted_list[i], sorted_list[i + 1] = sorted_list[i + 1], sorted_list[i]
+                swapped = True
+    return sorted_list
+
+if __name__ == '__main__':
+    original_list = get_input_parameters()
+    sorted_list = sort_list(original_list)
+    display_result(sorted_list)
